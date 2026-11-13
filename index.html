@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數學工作紙：平行線（鞏固練習）</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+            color: #222;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .sheet {
+            background: #fff;
+            padding: 30px 40px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            letter-spacing: 2px;
+        }
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+        .student-info span {
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            min-width: 110px;
+            text-align: center;
+        }
+        .instruction-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid #2b6cb0;
+            padding: 12px 16px;
+            margin-bottom: 22px;
+            font-size: 15px;
+        }
+        .instruction-box strong {
+            color: #2b6cb0;
+        }
+        .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            background: #eee;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+        .grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+        .question-card {
+            border: 1.5px solid #bbb;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .q-num {
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .answer-line {
+            margin-top: 8px;
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 1.5px solid #333;
+            vertical-align: middle;
+            margin: 0 4px 2px 10px;
+        }
+        .part2-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 18px;
+            align-items: center;
+        }
+        .print-btn {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px 24px;
+            font-size: 16px;
+            background: #2b6cb0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .print-btn:hover {
+            background: #2c5282;
+        }
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .sheet {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ 列印工作紙 (Print Worksheet)</button>
+
+<div class="sheet">
+    <header>
+        <h1>平行線工作紙</h1>
+        <div class="student-info">
+            <div>姓名：<span></span></div>
+            <div>班別：<span></span></div>
+            <div>學號：<span></span></div>
+            <div>日期：<span></span></div>
+        </div>
+    </header>
+
+    <div class="instruction-box">
+        <strong>溫馨提示（方法一）：</strong><br>
+        1. 先在兩條線之間畫出兩條<strong>垂直線</strong>。<br>
+        2. 拿出一張紙，在紙邊上標記其中一條垂直線的兩端長度。<br>
+        3. 把紙張移到另一條垂直線，檢查兩者之間的<strong>距離是否處處相等</strong>。
+    </div>
+
+    <div class="section-title">甲部：下列各組線是平行線嗎？用「方法一」量度，並在適當的方格內加「✓」。</div>
+
+    <div class="grid-2x2">
+        <!-- Q1: Parallel lines (Slanted) -->
+        <div class="question-card">
+            <span class="q-num">1.</span>
+            <svg width="240" height="130" viewBox="0 0 240 130">
+                <line x1="30" y1="90" x2="210" y2="30" stroke="#111" stroke-width="2.5"/>
+                <line x1="30" y1="120" x2="210" y2="60" stroke="#111" stroke-width="2.5"/>
+            </svg>
+            <div class="answer-line">
+                <span class="checkbox"></span> 是平行線
+                <span class="checkbox"></span> 不是平行線
+            </div>
+        </div>
+
+        <!-- Q2: Curves (Constant distance, NOT straight lines) -->
+        <div class="question-card">
+            <span class="q-num">2.</span>
+            <svg width="240" height="130" viewBox="0 0 240 130">
+                <path d="M 30 75 Q 120 15 210 75" fill="none" stroke="#111" stroke-width="2.5"/>
+                <path d="M 30 105 Q 120 45 210 105" fill="none" stroke="#111" stroke-width="2.5"/>
+            </svg>
+            <div class="answer-line">
+                <span class="checkbox"></span> 是平行線
+                <span class="checkbox"></span> 不是平行線
+            </div>
+        </div>
+
+        <!-- Q3: Set of 3 parallel lines -->
+        <div class="question-card">
+            <span class="q-num">3.</span>
+            <svg width="240" height="130" viewBox="0 0 240 130">
+                <line x1="25" y1="30" x2="215" y2="30" stroke="#111" stroke-width="2.5"/>
+                <line x1="25" y1="65" x2="215" y2="65" stroke="#111" stroke-width="2.5"/>
+                <line x1="25" y1="100" x2="215" y2="100" stroke="#111" stroke-width="2.5"/>
+                <text x="15" y="34" font-size="13" font-weight="bold">A</text>
+                <text x="15" y="69" font-size="13" font-weight="bold">B</text>
+                <text x="15" y="104" font-size="13" font-weight="bold">C</text>
+            </svg>
+            <div class="answer-line">
+                <span class="checkbox"></span> 是平行線
+                <span class="checkbox"></span> 不是平行線
+            </div>
+        </div>
+
+        <!-- Q4: Non-parallel converging lines -->
+        <div class="question-card">
+            <span class="q-num">4.</span>
+            <svg width="240" height="130" viewBox="0 0 240 130">
+                <line x1="30" y1="35" x2="210" y2="55" stroke="#111" stroke-width="2.5"/>
+                <line x1="30" y1="100" x2="210" y2="82" stroke="#111" stroke-width="2.5"/>
+            </svg>
+            <div class="answer-line">
+                <span class="checkbox"></span> 是平行線
+                <span class="checkbox"></span> 不是平行線
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">乙部：思考與分辨（不在同一平面上的線）</div>
+
+    <div class="part2-container">
+        <div class="question-card" style="justify-content: center;">
+            <span class="q-num">5.</span>
+            <!-- 3D Cuboid SVG showing skew lines -->
+            <svg width="260" height="165" viewBox="0 0 260 165">
+                <!-- Back hidden edges -->
+                <line x1="85" y1="30" x2="85" y2="110" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="85" y1="110" x2="225" y2="110" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="40" y1="145" x2="85" y2="110" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+                
+                <!-- Visible edges -->
+                <rect x="40" y="65" width="140" height="80" fill="none" stroke="#333" stroke-width="1.8"/>
+                <line x1="40" y1="65" x2="85" y2="30" stroke="#333" stroke-width="1.8"/>
+                <line x1="180" y1="65" x2="225" y2="30" stroke="#333" stroke-width="1.8"/>
+                <line x1="180" y1="145" x2="225" y2="110" stroke="#333" stroke-width="1.8"/>
+                <line x1="85" y1="30" x2="225" y2="30" stroke="#333" stroke-width="1.8"/>
+                <line x1="225" y1="30" x2="225" y2="110" stroke="#333" stroke-width="1.8"/>
+
+                <!-- Highlighted Skew Lines: Top-back edge (Red) & Front-right vertical edge (Blue) -->
+                <line x1="85" y1="30" x2="225" y2="30" stroke="#d93025" stroke-width="4"/>
+                <text x="145" y="22" fill="#d93025" font-size="14" font-weight="bold">線 A</text>
+
+                <line x1="180" y1="65" x2="180" y2="145" stroke="#1a73e8" stroke-width="4"/>
+                <text x="188" y="110" fill="#1a73e8" font-size="14" font-weight="bold">線 B</text>
+            </svg>
+            <div style="font-size: 13px; color: #555; text-align: center;">觀察長方體上的 <strong>線 A</strong> 和 <strong>線 B</strong></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: center; padding: 5px 0;">
+            <div style="font-size: 16px;">
+                <strong>線 A</strong> 和 <strong>線 B</strong> 永遠不會相交，它們是平行線嗎？<br>
+                <div style="margin-top: 14px;">
+                    <span class="checkbox"></span> 是平行線
+                    <span class="checkbox"></span> 不是平行線
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
